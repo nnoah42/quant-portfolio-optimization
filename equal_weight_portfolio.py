@@ -1,7 +1,7 @@
 import data_fetch
 
 total_invested = 10000
-total_per_tick = 10000 / len(data_fetch.tickers_qpo)
+total_per_tick = 10000 / len(data_fetch.tickers)
 closing_by_ticker = data_fetch.fetch_closing_data()
 
 def calc_shares(tick):
