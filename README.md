@@ -6,8 +6,7 @@ This project implements portfolio optimization by constructing and comparing fou
 - Equal Weight  
 - Global Minimum Variance  
 
-Using historical returns from the following ETFs:  
-**SPY**, **EFA**, **EEM**, **BND**, **VNQ**, and **TLT**.
+Using user-inputted tickers.
 
 The project runs Monte Carlo simulations to model potential future returns and calculates key performance metrics for each portfolio:  
 - Mean Return  
