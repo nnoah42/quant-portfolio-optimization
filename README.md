@@ -17,21 +17,51 @@ This allows evaluation and comparison of portfolio strategies under simulated ma
 
 ## Portfolio Strategy Formulas
 
-1. Equal Weight Portfolio (EWP)  
-   Each asset has equal weight:  
-   w_i = 1 / N
+### 1. Equal Weight Portfolio (EWP)
+Each asset has equal weight:
 
-2. Global Minimum Variance Portfolio (GMVP)  
-   Minimize wᵀ Σ w subject to Σ w_i = 1 and w_i ≥ 0
+\[
+w_i = \frac{1}{N}
+\]
 
-3. Inverse Volatility Portfolio (IVP)  
-   Weights proportional to inverse volatility:  
-   w_i = (1 / σ_i) / Σ_{j=1}^N (1 / σ_j)
+---
 
-4. Risk Parity Portfolio (RPP)  
-   Minimize squared differences of risk contributions:  
-   min Σ (w_i (Σ w)_i - (1/N) wᵀ Σ w)^2  
-   subject to Σ w_i = 1, w_i ≥ 0
+### 2. Global Minimum Variance Portfolio (GMVP)
+Minimize portfolio variance:
+
+\[
+\min_{w} \; w^\top \Sigma w
+\]
+
+Subject to:
+
+\[
+\sum_i w_i = 1, \quad w_i \ge 0
+\]
+
+---
+
+### 3. Inverse Volatility Portfolio (IVP)
+Weights proportional to inverse volatility:
+
+\[
+w_i = \frac{\frac{1}{\sigma_i}}{\sum_{j=1}^{N} \frac{1}{\sigma_j}}
+\]
+
+---
+
+### 4. Risk Parity Portfolio (RPP)
+Minimize squared differences of risk contributions:
+
+\[
+\min_w \sum_i \left( w_i (\Sigma w)_i - \frac{1}{N} w^\top \Sigma w \right)^2
+\]
+
+Subject to:
+
+\[
+\sum_i w_i = 1, \quad w_i \ge 0
+\]
 
 ## How to use
 
