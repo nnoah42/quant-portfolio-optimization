@@ -58,10 +58,11 @@ Minimize squared differences of risk contributions:
 \]
 
 Subject to:
-
+$$
 \[
 \sum_i w_i = 1, \quad w_i \ge 0
 \]
+$$
 
 ## How to use
 
