@@ -17,51 +17,44 @@ This allows evaluation and comparison of portfolio strategies under simulated ma
 
 ## Portfolio Strategy Formulas
 
-1. Equal Weight Portfolio (EWP)
+### 1. Equal Weight Portfolio (EWP)
 Each asset has equal weight:
 
-\[
+$$
 w_i = \frac{1}{N}
-\]
-
----
+$$
 
 ### 2. Global Minimum Variance Portfolio (GMVP)
 Minimize portfolio variance:
 
-\[
+$$
 \min_{w} \; w^\top \Sigma w
-\]
+$$
 
 Subject to:
 
-\[
+$$
 \sum_i w_i = 1, \quad w_i \ge 0
-\]
-
----
+$$
 
 ### 3. Inverse Volatility Portfolio (IVP)
 Weights proportional to inverse volatility:
 
-\[
+$$
 w_i = \frac{\frac{1}{\sigma_i}}{\sum_{j=1}^{N} \frac{1}{\sigma_j}}
-\]
-
----
+$$
 
 ### 4. Risk Parity Portfolio (RPP)
 Minimize squared differences of risk contributions:
 
-\[
+$$
 \min_w \sum_i \left( w_i (\Sigma w)_i - \frac{1}{N} w^\top \Sigma w \right)^2
-\]
+$$
 
 Subject to:
+
 $$
-\[
 \sum_i w_i = 1, \quad w_i \ge 0
-\]
 $$
 
 ## How to use
@@ -129,7 +122,7 @@ Notes:
 
 ## Results (Example)
 
-Below is a short example of how you might summarize the four strategies side‑by‑side for a given ticker set and date range:
+Below is a short example of how you might summarize the four strategies side-by-side for a given ticker set and date range:
 
 | Strategy | Mean Return | Volatility | Sharpe |
 | --- | --- | --- | --- |
@@ -143,5 +136,7 @@ Plot output can be saved with `--save-plot` and included here:
 ```text
 results/monte_carlo.png
 ```
+
+
 
 
